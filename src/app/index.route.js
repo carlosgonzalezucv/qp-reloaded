@@ -10,7 +10,7 @@
         abstract: true,
         url: "/index",
         templateUrl: "app/components/common/content.html"
-      });
-    $urlRouterProvider.otherwise('/index');
+      })
+    $urlRouterProvider.otherwise('/index/information');
   }
 })();

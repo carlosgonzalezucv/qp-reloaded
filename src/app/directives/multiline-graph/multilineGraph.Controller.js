@@ -62,8 +62,12 @@
         gd = gd3.node();
       Plotly.plot(gd, data, layout, options);
       window.onresize = function() {
-        Plotly.Plots.resize(gd);
+        return gd && !isHidden(gd) && Plotly.Plots.resize(gd);
       };
+      function isHidden(gd) {
+        var display = window.getComputedStyle(gd).display;
+        return !display || display === 'none';
+      }
     });    
   }
 })();

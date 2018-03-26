@@ -6,6 +6,17 @@
     </div>
     <div class="ibox-content">
       <div class="row">
+        <div class="col-lg-3" ng-repeat="data in vm.dataSet">
+          <div class="ibox">
+            <div class="ibox-content product-box">
+              <div class="p-sm">
+                <h5>{{data.title}}<span class="fa fa-search pull-right" style="cursor: pointer" ng-click="vm.showDataDetails(data)"></span></h5>
+                <h2>{{data.total}}</h2>                
+              </div>
+              <div sparkline spark-data="data.data" spark-options="vm.demo4Options"></div>
+            </div>
+          </div>
+        </div>
         <div class="col-md-12">
           <multiline-graph id="primerGrafico" data="vm.data"></multiline-graph>
         </div>
