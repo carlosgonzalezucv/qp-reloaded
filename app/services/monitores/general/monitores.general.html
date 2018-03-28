@@ -1,0 +1,34 @@
+<div class="wrapper wrapper-content animated fadeInRight">
+  <div class="ibox">  
+    <div class="row">
+      <div class="col-md-12">
+        <progress-bar2 value="vm.generalEvaluation" text="Información general"></progress-bar2>
+        <div class="row">
+          <div class="col-md-12">
+            <critic-level level="vm.criticLevel"></critic-level>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <band-separator title="Estado del servidor" add-monitor="vm.addMonitor"></band-separator>
+        <div class="row" ba-panel ng-if="vm.serverStates.length">
+          <div class="col-md-12 server-state-container">
+            <div class="row">
+              <div class="col-md-4" ng-repeat="server in vm.serverStates">
+                <div class="row">
+                  <server-state server="server" remove-server="vm.removeMonitor($index)"></server-state>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <band-separator title="Estado del servidor"></band-separator>
+      </div>
+    </div>
+    
+  </div>
+</div>
