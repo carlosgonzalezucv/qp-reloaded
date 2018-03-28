@@ -1,0 +1,8 @@
+<div>  
+  <p>
+    <strong>Nivel de criticidad: </strong>
+    <span ng-bind-html="vm.rating"></span>
+    <span class="text-default" ng-if="level < 2">Muy bajo</span>
+    <span class="text-danger" ng-if="level >= 2">Muy alto</span>
+  </p> 
+</div>

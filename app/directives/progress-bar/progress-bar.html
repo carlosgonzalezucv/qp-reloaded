@@ -1,0 +1,8 @@
+<div>
+  <h3>{{ text }}</h3>
+  <div class="progress">
+    <div class="progress-bar progress-bar-{{type || 'default'}}" role="progressbar" aria-valuenow="{{ value }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ value }}%">
+      {{value}}% Completado ({{value>90?'exitoso':'puede mejorar'}})
+    </div>
+  </div>
+</div>
