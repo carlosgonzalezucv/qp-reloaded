@@ -9,9 +9,7 @@
         data: '=',
         id: '@'
       },
-      template: `
-        <div id={{id}}></div>
-      `,
+      template: "<div id={{id}}></div>",
       controller: 'MultilineGraphController',
       controllerAs: 'vm'
     }

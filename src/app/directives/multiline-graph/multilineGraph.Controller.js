@@ -4,7 +4,7 @@
 
   function MultiLineGraphController ($scope) {
     var vm = this,
-        domain = new Array(100).fill(0).map((e,i) => (2*Math.PI*(i/100)));
+        domain = new Array(100).fill(0).map(function(e,i){return (2*Math.PI*(i/100))});
     var trace1 = {
       x: domain, 
       y: domain.map(Math.sin), 
@@ -13,7 +13,7 @@
     };
     var trace2 = {
       x: domain, 
-      y: domain.map(e => Math.cos(3*e)), 
+      y: domain.map(function(e) {return Math.cos(3*e)}), 
       name: 'Cos(3t)',
       type: 'scatter'
     };
@@ -47,7 +47,7 @@
       displayModeBar: false
     };
     
-    $( document ).ready( () => {
+    $( document ).ready( function() {
       var WIDTH_IN_PERCENT_OF_PARENT = 90,
         HEIGHT_IN_PERCENT_OF_PARENT = 90,
         d3 = Plotly.d3,

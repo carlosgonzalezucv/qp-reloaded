@@ -10,11 +10,11 @@
     var vm = this;
     $state.go('index.performance.graph');
     vm.showDataDetails = showDataDetails;
-    vm.dataSet = new Array(4).fill(0).map( (e, i) => {
-      let aux = {};
+    vm.dataSet = new Array(4).fill(0).map(function(e, i) {
+      var aux = {};
       aux.title = 'Estadistica ' + (++i);
       aux.data = new Array(50).fill(0).map(Math.random);
-      aux.total = aux.data.reduce((a,b) => a+b).toFixed(0);
+      aux.total = aux.data.reduce(function(a,b){ return a+b }).toFixed(0);
       return aux;
     });
     vm.demo4Options = {
