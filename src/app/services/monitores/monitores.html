@@ -1,43 +1,19 @@
-<div class="row">
+<div class="row m-t-md m-b-lg">
   <div class="col-md-12">
-    <div class="row">
-      <div class="col-md-12 button-container">
-        <div class="row">
-          <div class="col-md-2 col-sm-2 col-xs-4">
-            <div class="button-wrapper">
-              <button type="button" class="btn btn-primary form-control over-hide" ui-sref="index.monitores.general">Inf general</button>
-            </div>
+    <div class="row wrapper border-bottom white-bg page-heading">
+      <div class="col-md-10 col-md-offset-1 wrapper">
+        <!-- BOTONES  -->
+        <h1>COMPONENTES</h1>
+        <small ui-sref="index.information" style="cursor: pointer"> < VOLVER </small>
+        <div class="row m-t-md">
+          <div ng-repeat="button in vm.navButtons">
+            <c-button title="{{button.title}}" target="{{button.target}}" cname="{{vm.cName}}"></c-button>
           </div>
-          <div class="col-md-2 col-sm-2 col-xs-4">
-            <div class="button-wrapper">
-              <button type="button" class="btn btn-primary form-control over-hide" ui-sref="index.monitores.servidor">Servidores</button>
-            </div>
-          </div>
-          <div class="col-md-2 col-sm-2 col-xs-4">
-            <div class="button-wrapper">
-              <button type="button" class="btn btn-primary form-control over-hide" ui-sref="index.monitores.blacklist">Lista negra</button>
-            </div>
-          </div>
-          <div class="col-md-2 col-sm-2 col-xs-4">
-            <div class="button-wrapper">
-              <button type="button" class="btn btn-primary form-control over-hide" ui-sref="index.monitores.correos">Correos</button>
-            </div> 
-          </div>  
-          <div class="col-md-2 col-sm-2 col-xs-4">
-            <div class="button-wrapper">
-              <button type="button" class="btn btn-primary form-control over-hide" ui-sref="index.monitores.dns">DNS</button>
-            </div> 
-          </div>      
-          <div class="col-md-2 col-sm-2 col-xs-4">
-            <div class="button-wrapper">
-              <button type="button" class="btn btn-primary form-control over-hide" ui-sref="index.monitores.conectividad">Conectividad</button>
-            </div> 
-          </div>                     
         </div>
       </div>
-      <div class="col-md-12 m-t-lg">
-        <ui-view></ui-view>
-      </div>  
     </div>
+    <div class="wrapper wrapper-content">
+      <ui-view></ui-view>
+    </div>  
   </div>
 </div>
