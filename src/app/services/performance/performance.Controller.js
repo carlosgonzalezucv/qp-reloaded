@@ -7,7 +7,20 @@
     ]);  
   /** @ngInject */
   function PerformanceCtrl($state) {
-    var vm = this;
+    var vm = this, baseState = "index.performance";
+    vm.navButtons = [{
+        title: "RESUMEN",
+        target: baseState + ".graph"
+      },{
+        title: "EVALUACION_GENERAL",
+        target: baseState + ".general",
+      },{
+        title: "DISEÑO_RESPONSIVE",
+        target: baseState + ".responsive",
+      },{
+        title: "P_ORGANICO",
+        target: baseState + ".organico",
+      }];
     $state.go('index.performance.graph');
     vm.showDataDetails = showDataDetails;
     vm.dataSet = new Array(4).fill(0).map(function(e, i) {
@@ -25,7 +38,7 @@
       fillColor: "#ffffff"
     };
     function showDataDetails (data) {
-      alert ('Los detalles de la data son', data.title)
+      alert ('Los detalles de la data son', data)
     }
   }  
 })();
