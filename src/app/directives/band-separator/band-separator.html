@@ -1,13 +1,14 @@
-<div class="row band-separator">
+<div class="row band-separator ">
   <div class="col-md-4">
-    <h2>{{ title }}</h2>
+    <h2>{{ title }} <span class="fa fa-bars" ng-click="showContent(childId)"></span></h2>
   </div>
   <div class="col-md-4 pull-right">
     <div class="upgrade">
       <span> 
-        <input type="button" class="btn btn-default-focus pull-right" value="Agregar monitor" ng-click="addMonitor()"/>
+        <button class="btn btn-link pull-right" ng-click="addMonitor(childId)">
+          <span class="fa fa-plus"></span> ADD_MONITOR
+        </button>
       </span>
     </div>
   </div>
 </div>
-<hr>

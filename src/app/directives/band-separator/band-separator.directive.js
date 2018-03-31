@@ -8,10 +8,12 @@
       restrict: 'E',
       scope: {
         title: '@',
-        addMonitor: '='
+        addMonitor: '=',
+        showContent: '=',
+        childId: '@chid'
       },
       templateUrl: 'app/directives/band-separator/band-separator.html',
-      controller: function() {
+      controller: function($scope) {
         var vm = this;
       },
       controllerAs: 'vm'
