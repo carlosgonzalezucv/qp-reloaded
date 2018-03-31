@@ -1,7 +1,7 @@
 <div>  
   <p>
     <strong>Nivel de criticidad: </strong>
-    <span ng-bind-html="vm.rating"></span>
+    <span ng-repeat="star in vm.stars track by $index" class="fa fa-star" style="color: {{($index < level )? 'rgb(255,128,123)': 'rgba(255,128,123,.4)'}}"></span>
     <span class="text-default" ng-if="level < 2">Muy bajo</span>
     <span class="text-danger" ng-if="level >= 2">Muy alto</span>
   </p> 
