@@ -1,5 +1,5 @@
-<div class="panel panel-medium" style="cursor: pointer">
-  <div class="panel-heading" style="height: 100%" ui-sref="{{ target }}">
+<div class="panel panel-medium ibox-content  product-box" style="cursor: pointer" ui-sref="{{ target }}">
+  <div class="panel-heading" style="height: 100%">
     <h3 class="panel-title">{{ title }}</h3>
   </div>
   <div class="panel-body" ng-init="showIcon=true">
@@ -7,7 +7,7 @@
       style="width: 100%; background: #0e83929a; display: flex; justify-content: center;"
     >
       <i class="fa {{icon}}" style="font-size: 10em" ng-show="showIcon"></i>
-      <div style="height: 150px" >
+      <div style="height: 150px" class="p-md">
         <p class="animated fadeInRight" ng-bind-html="description"></p>
       </div>      
     </div>
