@@ -5,3 +5,4 @@ gulp/*
 dist/*
 .tmp/*
 ./vscode
+release/*
