@@ -4,15 +4,15 @@
     .module('inspinia')
     .directive('iboxTools', iboxTools);
 
-  Directive.$inject = ['$timeout'];
-  function Directive($timeout) {
+  iboxTools.$inject = ['$timeout'];
+  function iboxTools ($timeout) {
     var directive = {
       restrict: 'A',
       scope: true,
       template: `
         <div class="ibox-tools" uib-dropdown>
           <a ng-click="showhide()"> <i class="fa fa-chevron-up"></i></a>
-          <a href uib-dropdown-toggle>
+          <!--a href uib-dropdown-toggle>
             <i class="fa fa-wrench"></i>
           </a>
           <ul uib-dropdown-menu>
@@ -21,7 +21,7 @@
             <li><a href>Config option 2</a>
             </li>
           </ul>
-          <a ng-click="closebox()"><i class="fa fa-times"></i></a>
+          <a ng-click="closebox()"><i class="fa fa-times"></i></a-->
         </div>
       `,
       controller: Controller
