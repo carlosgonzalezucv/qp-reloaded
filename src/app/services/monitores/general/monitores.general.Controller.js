@@ -1,7 +1,6 @@
 (function(){
   'use strict';
-  angular.module('inspinia')
-    .controller('GeneralMonitoresController', GeneralMonitoresCtrl);
+  angular.module('inspinia').controller('GeneralMonitoresController', GeneralMonitoresCtrl);
 
   function GeneralMonitoresCtrl () {
     var vm = this;  
@@ -53,7 +52,6 @@
         showDetails: false
       }];
     vm.blackList = [...vm.serverState];
-    //
     function showServerPanel (id){
       vm.panels[id] = !vm.panels[id];
     }
@@ -66,7 +64,7 @@
         status: 'No disponible',
         icon:  {
           name: 'fa fa-info fa-2x',
-          color: 'yellow'
+          color: 'rgb(38, 80, 120)'
         },
         showDetails: false
       });
@@ -76,12 +74,7 @@
     }
     function showContent(id) {
       showServerPanel(id);
-      // if (!vm.panels[id]) {
-      //   $("#" + id).addClass('fadeOutRight');
-      // } else {
-      //   $("#" + id).removeClass('fadeOutRight');
-      // }
-      return ;
+      return;
     }
   }
 })();

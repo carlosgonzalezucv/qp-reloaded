@@ -17,7 +17,6 @@
       </div>  
     </div>
   </div>  
-
   <div class="ibox e-margin-float">  
     <div class="ibox-title">
       <div class="row">
@@ -30,7 +29,7 @@
       <div  class="row p-w-md" ng-if="vm.serverState.length && vm.panels.serverState">
         <div class="col-md-12 server-state-container">
           <div class="row gcontainer">
-            <div class="col-md-4" ng-repeat="server in vm.serverState">
+            <div class="col-md-4 serverstate" ng-repeat="server in vm.serverState">
               <div class="p-w-md">
                 <server-state server="server" remove-server="vm.removeMonitor('serverState', $index)"></server-state>
               </div>    
